@@ -1,0 +1,81 @@
+.avatarPicker{
+	text-align: center;
+}
+.avatar{
+	border: 1px solid #fff;
+	border-radius: 50%;
+	height: 60px;
+	width: 60px;
+	cursor: pointer;
+	position: relative;
+}
+.avatar:hover{
+	border: 1px solid #9BA0A3;
+}
+.avatar.avatarActive{
+	border: 1px solid #9BA0A3;
+}
+.avatarInList{
+	border: 3px solid #2C3033;
+}
+.avatarInList:hover{
+	border: 3px solid #9BA0A3;
+}
+.avatarInList.listAvatarActive{
+	border: 3px solid #7AA1B2;
+}
+.avatarPopover{
+	background-color: #2C3033;
+	border-radius: 2px;
+	width: 280px;
+	height: auto;
+	padding: 14px;
+	box-shadow: 0 0 10px 2px rgb(102, 102, 102);
+	position: absolute;
+	z-index: 4;
+	margin: 6px auto;
+	left: 0;
+	right: 0;
+	display: none;
+    -webkit-animation: jiggle 0.2s linear;
+}
+.popoverActive{
+	display: block;
+}
+@-webkit-keyframes jiggle {
+	0%{
+		-webkit-transform: scale(0);
+	}
+    85% {
+        -webkit-transform: scale(1.08);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+.avatarPopover:before{
+	border-bottom: 8px solid #2C3033;
+	border-right: 8px solid transparent;
+	border-left: 8px solid transparent;
+	content: '';
+	top: -8px;
+	left: 50%;
+	margin-left: -10px;
+	position: absolute;
+}
+.popoverTitle{
+	margin: 14px 0;
+	color: #f9f9f9;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+}
+.avatarList{
+	list-style-type: none;
+	overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.avatarItem{
+	float: left;
+    width: 25%;
+}
